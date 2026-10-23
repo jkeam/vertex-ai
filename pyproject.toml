@@ -1,0 +1,21 @@
+[project]
+name = "vertex-ai"
+version = "0.1.0"
+description = "Demo on how to use vertex ai"
+readme = "README.md"
+authors = [
+    { name = "Jon Keam", email = "jpkeam@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic[vertex]>=2.1.0",
+    "google-cloud-aiplatform>=2.6.0",
+    "litellm>=1.106.2",
+]
+
+[project.scripts]
+vertex-ai = "vertex-ai:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
